@@ -1,0 +1,18 @@
+const express= require("express");
+const app = express();
+require("dotenv").config();
+const connection = require('./configuration/config')
+const dishRouters=require('./src/Dishes/dishes.routes')
+const cors = require('cors');
+const port= process.env.port
+
+app.use(express.json());
+app.use(cors({ origin: '*' }))
+app.use('/uploads',express.static('uploads'))
+app.use(dishRouters);
+connection()
+
+
+app.listen(port,()=>{
+    console.log(`success run on http://localhost:${port}/`);
+})
