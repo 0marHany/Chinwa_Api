@@ -14,7 +14,7 @@
   ],
   "functions": {
     "api": {
-      "maxDuration": 30 // Adjust timeout limit as needed
+      "maxDuration": 30 
     }
   }
 }
