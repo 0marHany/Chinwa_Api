@@ -12,7 +12,9 @@ app.use('/uploads',express.static('uploads'))
 app.use(dishRouters);
 connection()
 
-
+app.get("/",(req,res)=>{
+    res.json({message:"Hello it's Work"})
+})
 app.listen(port,()=>{
     console.log(`success run on http://localhost:${port}/`);
 })
