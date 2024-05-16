@@ -4,7 +4,7 @@ require("dotenv").config();
 const connection = require('./configuration/config')
 const dishRouters=require('./src/Dishes/dishes.routes')
 const cors = require('cors');
-const port= process.env.port
+const port= 5000||process.env.port
 
 app.use(express.json());
 app.use(cors({ origin: '*' }))

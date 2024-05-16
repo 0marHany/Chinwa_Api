@@ -6,6 +6,9 @@
     "start": "node index.js"
   },
   "keywords": [],
+  "engines": {
+    "node": "21.6.2"
+  },
   "author": "",
   "license": "ISC",
   "description": "",
