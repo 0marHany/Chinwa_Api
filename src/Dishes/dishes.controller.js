@@ -16,9 +16,7 @@ const getAllDishes = async (req, res) => {
     }
 }
 const getDishe= async(req,res)=>{
-    const id = req.params.id;;
-    const data = await Dishes.find({ _id: id });
-    res.json({ message: "sucssess", data })
+      res.json({ message: "sucssess the time notOut"})
 }
 const addDishe = async (req, res) => {
     try {
