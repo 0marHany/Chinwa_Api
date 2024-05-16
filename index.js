@@ -17,7 +17,7 @@ app.use(dishRouters);
 connection()
 
 app.get("/",(req,res)=>{
-    res.json({message:"Hello it's Work"})
+    res.json({message:"Hello it's Work successfully"})
 })
 app.listen(port,()=>{
     console.log(`success run on http://localhost:${port}/`);
