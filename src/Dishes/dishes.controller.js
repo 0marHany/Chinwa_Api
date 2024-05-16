@@ -20,7 +20,7 @@ const addDishe = async (req, res) => {
         const { categories, disheName, ingredients, price } = req.body
         const newDish = new Dishes({
             categories, disheName, ingredients, price,
-            dishImg: `http://localhost:5000/${req.file.path}`
+            dishImg: `https://chinwa-api-5emg.vercel.app/${req.file.path}`
         })
         await newDish.save()
         res.status(200).json({ message: "sucssess", newDish })
