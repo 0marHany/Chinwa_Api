@@ -15,6 +15,11 @@ const getAllDishes = async (req, res) => {
         res.status(400).json({ message: "some issues", error: error.message })
     }
 }
+const getDishe= async(req,res)=>{
+    const id = req.params.id;;
+    const data = await Dishes.find({ _id: id });
+    res.json({ message: "sucssess", data })
+}
 const addDishe = async (req, res) => {
     try {
         const { categories, disheName, ingredients, price } = req.body
@@ -57,4 +62,4 @@ const deleteAllDishes = async (req, res) => {
         res.status(400).json({ message: "some issues", error: error.message })
     }
 }
-module.exports = { getAllDishes, addDishe, updateDishe, deleteDishe, deleteAllDishes }
+module.exports = { getAllDishes, addDishe, updateDishe, deleteDishe, deleteAllDishes , getDishe}

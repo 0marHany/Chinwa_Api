@@ -1,11 +1,12 @@
 // const Upload = require('../../services/uploadFile');
 const { Upload } = require("../../services/uploadFile");
-const { getAllDishes, addDishe,updateDishe,deleteDishe,deleteAllDishes } = require('./dishes.controller');
+const { getAllDishes, addDishe,updateDishe,deleteDishe,deleteAllDishes,getDishe } = require('./dishes.controller');
 
 const routes= require('express').Router();
 
 
 routes.get("/dishes",getAllDishes);
+routes.get("/dishes/:id",getDishe);
 
 routes.post('/dishes',Upload.single('dishImg'),addDishe)
 
