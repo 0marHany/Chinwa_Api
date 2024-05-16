@@ -3,6 +3,7 @@ const { Schema } = require("mongoose");
 const disheSchema = new Schema({
     categories: {
         type: String, required: true, enum: [
+            "Home",
             "Appetizers",
             "Bao",
             "Beef",
