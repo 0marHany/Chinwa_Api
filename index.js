@@ -4,9 +4,13 @@ require("dotenv").config();
 const connection = require('./configuration/config')
 const dishRouters=require('./src/Dishes/dishes.routes')
 const cors = require('cors');
+const compression = require("compression")
 const port= 5000||process.env.port
 
 app.use(express.json());
+
+app.use(compression());
+
 app.use(cors({ origin: '*' }))
 app.use('/uploads',express.static('uploads'))
 app.use(dishRouters);
